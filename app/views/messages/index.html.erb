@@ -17,6 +17,7 @@
   <%= f.text_field :name %>
 
   内容:
-  <%= f.text_field :body %>
+<%= text_area :page, :comtent, :size => "20x10" %>
+# <textarea cols="20" id="page_content" name="page[content]" rows="10"></textarea>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
