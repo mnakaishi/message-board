@@ -13,6 +13,22 @@
 </div>
 
 <%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
+  <% if @message.errors.present? %>
+    <div class="alert alert-danger">
+      <%= alert %>
+      <ul>
+        <% @message.errors.full_messages.each do |full_messages| %>
+          <li>
+           <%= full_message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    
+   <% end %>
+
+
+
   名前：
   <br>
   <%= f.text_field :name %>
