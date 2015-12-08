@@ -14,7 +14,10 @@
 
 <%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
 
-  <textarea name="kanso" rows="4" cols="40">名前：</textarea>
+  <label class="control-label col-xs-2">name</label>
+  <div class="col-xs-5">
+    <input type="text" name="name" class="form-control">
+  </div>
   <br>
   <textarea name="kanso" rows="4" cols="120">内容：</textarea>
   <br>
