@@ -16,11 +16,13 @@
   <%= f.text_field :name %>
   <br />
     
-  　<%= f.label :body,'内容:', class: 'col-sm-1' %>
-  <div class="col-sm-11">
-  　<%= f.text_area :body, class: 'form-control' , rows: 10 %>
-
-  <br />
+  <div class="form-group ">
+    <span class="glyphicon glyphicon-pencil"></span>
+    <%= f.label :body,'内容:', class: 'col-sm-1 control-label' %>
+    <div class="col-sm-11">
+    <%= f.text_area :body, class: 'form-control' , rows: 10 %>
+    </div>
+    <br />
     
   内容:
   <%= f.text_field :body %>
