@@ -12,17 +12,19 @@
     </div>
   <% end %>
 
-  名前:
+    
+    
+
+<%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
+  名前：
+  <br>
   <%= f.text_field :name %>
-  <br />
-    
+  <br>
+  内容：
+  <br>
+  <%= f.text_field :name="content" rows="4" cols="120">
+  
+  
 
-
-  <%= f.label :body,'内容:'>
-  <%= f.text_area :body, rows: 10 %>
-　<br />
-    
-  内容:
-  <%= f.text_field :body %>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
