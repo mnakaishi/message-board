@@ -1,3 +1,61 @@
+<% #アラート機能 %>
+<%= form_for(@message) do |f| %>
+  <% if @message.errors.present? %>
+    <div class="alert alert-danger">
+      <%= alert %>
+      <ul>
+        <% @message.errors.full_messages.each do |full_message| %>
+          <li>
+            <%= full_message %>
+          </li>
+        <% end %> 
+      </ul>
+    </div>
+  <% end %>
+ 
+  <!--名前フーム-->
+  <div class="form-group">
+    <span class="glyphicon glyphicon-user"></span>
+    <%= f.label :name,'名前:', class: 'col-sm-1 control-label' %>
+    <div class="col-sm-11">
+    <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+  <br />
+     
+   <!--年齢フーム-->
+  <div class="form-group">
+    <span class="glyphicon glyphicon-time"></span>
+    <%= f.label :age,'年齢:', class: 'col-sm-1 control-label' %>
+    <div class="col-sm-11">
+    <%= f.text_field :age, placeholder: '数値のみ入力可能', class: 'form-control' %>
+    </div>
+  </div>
+  <br />
+  
+  <!--内容フーム-->
+  <div class="form-group ">
+    <span class="glyphicon glyphicon-pencil"></span>
+    <%= f.label :body,'内容:', class: 'col-sm-1 control-label' %>
+    <div class="col-sm-11">
+    <%= f.text_area :body, class: 'form-control' , rows: 10 %>
+    </div>
+    <br />
+ 
+    
+    <div class=col-sm-1>
+    </div>
+    
+    <div class="col-sm-11">
+    <%= f.submit class: "btn btn-sm btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+<% if false %>
 <%= form_for(@message) do |f| %>
   <% if @message.errors.present? %>
     <div class="alert alert-danger">
@@ -27,4 +85,6 @@
   内容:
   <%= f.text_field :body %>
   <%= f.submit class: "btn btn-sm btn-primary" %>
+<% end %>
+
 <% end %>
