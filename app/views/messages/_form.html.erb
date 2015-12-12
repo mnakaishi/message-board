@@ -16,14 +16,12 @@
   <%= f.text_field :name %>
   
   <div class="form-group">
-    <span class="glyphicon glyphicon-user"></span>
-    <%= f.label :name,'名前:', class: 'col-sm-1 control-label' %>
+    <span class="glyphicon glyphicon-time"></span>
+    <%= f.label :age,'年齢:', class: 'col-sm-1 control-label' %>
     <div class="col-sm-11">
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.text_field :age, placeholder: '数値のみ入力可能', class: 'form-control' %>
     </div>
   </div>
-  <br />
-
 
   内容:
   <%= f.text_field :body %>
