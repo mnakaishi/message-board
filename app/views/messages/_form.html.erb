@@ -15,14 +15,15 @@
   名前:
   <%= f.text_field :name %>
   
-  <div class="form-group">
-    <span class="glyphicon glyphicon-time"></span>
-    <%= f.label :age,'年齢:', class: 'col-sm-1 control-label' %>
-    <div class="col-sm-11">
-    <%= f.text_field :age, placeholder: '数値のみ入力可能', class: 'form-control' %>
-    </div>
-  </div>
+  <!--内容フーム-->
 
+    <span class="glyphicon glyphicon-pencil"></span>
+    <%= f.label :body,'内容:', class: 'col-sm-1 control-label' %>
+    <div class="col-sm-11">
+    <%= f.text_area :body, class: 'form-control' , rows: 10 %>
+
+    <br />
+    
   内容:
   <%= f.text_field :body %>
   <%= f.submit class: "btn btn-sm btn-primary" %>
